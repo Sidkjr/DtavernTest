@@ -1,0 +1,110 @@
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .elfhover {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 110%;
+    left: 26.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .orchover {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 110%;
+    left: 42.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .vamphover {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 110%;
+    left: 59.5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .nordhover {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 110%;
+    left: 76%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .elf-guild:hover .image {
+    opacity: 0.3;
+  }
+  
+  .elf-guild:hover .elfhover {
+    opacity: 1;
+  }
+
+  .orc-guild:hover .image {
+    opacity: 0.3;
+  }
+  
+  .orc-guild:hover .orchover {
+    opacity: 1;
+  }
+
+  .vamp-guild:hover .image {
+    opacity: 0.3;
+  }
+  
+  .vamp-guild:hover .vamphover {
+    opacity: 1;
+  }
+
+  .nord-guild:hover .image {
+    opacity: 0.3;
+  }
+  
+  .nord-guild:hover .nordhover {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+  .select-guild {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .elf-guild {
+    margin-right: 10px;
+  }
+  .orc-guild {
+    margin-right: 10px;
+  }
+  .vamp-guild {
+    margin-right: 10px;
+  }
+  .nord-guild {
+    margin-right: 10px;
+  }

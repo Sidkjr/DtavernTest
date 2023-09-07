@@ -4,6 +4,7 @@ import { Row, Form, Button, Card, ListGroup } from 'react-bootstrap'
 import { create as ipfsHttpClient } from 'ipfs-http-client'
 import { Buffer } from 'buffer';
 
+
 // @ts-ignore
 window.Buffer = Buffer;
 
@@ -52,7 +53,8 @@ const Home = ({ contract }) => {
             const author = {
                 address: i.author,
                 username: metadataProfile.username,
-                avatar: metadataProfile.avatar
+                avatar: metadataProfile.avatar,
+                guild: metadataProfile.guild
             }
             // define post object
             let post = {
@@ -142,6 +144,9 @@ const Home = ({ contract }) => {
                                     />
                                     <small className="ms-2 me-auto d-inline">
                                         {post.author.username}
+                                    </small>
+                                    <small className='ms-2 me-auto d-inline'>
+                                        {post.author.guild}
                                     </small>
                                     <small className="mt-1 float-end d-inline">
                                         {post.author.address}
