@@ -106,12 +106,12 @@ const Home = ({ contract }) => {
         <div className="container-fluid mt-5">
             {hasProfile ?
                 (<div className="row">
-                    <main role="main" className="col-lg-12 mx-auto" style={{ maxWidth: '1000px' }}>
+                    <main role="main" className="col-lg-12 mx-auto" style={{ maxWidth: '500px' }}>
                         <div className="content mx-auto">
                             <Row className="g-4">
                                 <Form.Control onChange={(e) => setPost(e.target.value)} size="lg" required as="textarea" />
                                 <div className="d-grid px-0">
-                                    <Button onClick={uploadPost} variant="primary" size="lg">
+                                    <Button onClick={uploadPost} variant="outline-warning" size="lg">
                                         Post!
                                     </Button>
                                 </div>
@@ -133,36 +133,49 @@ const Home = ({ contract }) => {
             {posts.length > 0 ?
                 posts.map((post, key) => {
                     return (
-                        <div key={key} className="col-lg-12 my-3 mx-auto" style={{ width: '1000px' }}>
-                            <Card border="primary">
-                                <Card.Header>
+                        <div key={key} className="col-lg-12 my-3 mx-auto" style={{ width: '500px' }}>
+                            <Card style={{padding: '2.5%', borderRadius: '15px', boxShadow: '0 0 20px gold', marginBottom: '50px'}}>
+                                <Card.Header style={{borderRadius: '15px', }}>
                                     <img
                                         className='mr-2'
-                                        width='30'
-                                        height='30'
+                                        width='50'
+                                        height='50'
+                                        style={{borderRadius: '50%', marginRight: '1%'}}
                                         src={post.author.avatar}
                                     />
                                     <small className="ms-2 me-auto d-inline">
                                         {post.author.username}
                                     </small>
-                                    <small className='ms-2 me-auto d-inline'>
-                                        {post.author.guild}
+                                    <small>
+                                        {
+                                            (()=> {
+                                                switch (post.author.guild) {
+                                                case 'Elf': return (<span style={{backgroundColor: 'aqua', color: 'black'}}>Elf</span>);
+                                                case 'Orc': return (<span style={{backgroundColor: 'green', color: 'white'}}>Orc</span>);
+                                                case 'Vamp': return (<span style={{backgroundColor: 'red', color: 'white'}}>Vamp</span>);
+                                                case 'Nord': return (<span style={{backgroundColor: 'gold', color: 'black'}}>Nord</span>);
+                                                }
+                                            })()
+                                        }
                                     </small>
-                                    <small className="mt-1 float-end d-inline">
+                                    <small className="mt-1 float-end d-inline" style={{fontWeight: 'bold', opacity: '0.6'}}>
                                         {post.author.address}
                                     </small>
                                 </Card.Header>
-                                <Card.Body color="secondary">
-                                    <Card.Title>
-                                        {post.content}
+                                <Card.Body color="grey" style={{backgroundColor: '#171717', borderRadius: '15px', boxShadow: '0 0 5px gold', marginBottom: '20px'}}>
+                                    <Card.Title >
+                                        <div style={{color: 'whitesmoke'}}>
+                                            {post.content}
+                                        </div>
+                                        
                                     </Card.Title>
                                 </Card.Body>
                                 <Card.Footer className="list-group-item">
-                                    <div className="d-inline mt-auto float-start">Tip Amount: {ethers.utils.formatEther(post.tipAmount)} ETH</div>
+                                    <div className="d-inline mt-auto float-start" style={{paddingLeft: '2%', opacity: '0.6'}}>Tip Amount: {ethers.utils.formatEther(post.tipAmount)} ETH</div>
                                     {address === post.author.address || !hasProfile ?
                                         null : <div className="d-inline float-end">
-                                            <Button onClick={() => tip(post)} className="px-0 py-0 font-size-16" variant="link" size="md">
-                                                Tip for 0.1 ETH
+                                            <Button onClick={() => tip(post)} variant="dark" size="md" style={{padding: '10px', borderRadius: '15px'}}>
+                                                Tip
                                             </Button>
                                         </div>}
                                 </Card.Footer>

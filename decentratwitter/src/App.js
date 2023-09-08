@@ -46,9 +46,9 @@ function App() {
   }
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App" style={{backgroundColor: '#171717' , height: '100%'}}>
         <>
-          <Navbar expand="lg" bg="secondary" variant="dark">
+          <Navbar expand="lg" bg="gold" variant="dark">
             <Container>
               <Navbar.Brand href="http://www.dappuniversity.com/bootcamp">
                 <img src={logo} width="40" height="80" className="" alt="" />
@@ -67,7 +67,7 @@ function App() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="button nav-button btn-sm mx-4">
-                      <Button variant="outline-light">
+                      <Button variant="outline-light" style={{fontWeight: 'bold'}}>
                         {account.slice(0, 5) + '...' + account.slice(38, 42)}
                       </Button>
 

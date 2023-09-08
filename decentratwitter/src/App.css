@@ -10,9 +10,8 @@
   .elfhover {
     transition: .5s ease;
     opacity: 0;
-    position: absolute;
-    top: 45%;
-    left: 26%;
+    top: -35%;
+    left: 49.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
@@ -21,9 +20,8 @@
   .orchover {
     transition: .5s ease;
     opacity: 0;
-    position: absolute;
-    top: 45%;
-    left: 42.5%;
+    top: -35%;
+    left: 49.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
@@ -32,9 +30,8 @@
   .vamphover {
     transition: .5s ease;
     opacity: 0;
-    position: absolute;
-    top: 45%;
-    left: 59.5%;
+    top: -35%;
+    left: 49.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
@@ -43,9 +40,8 @@
   .nordhover {
     transition: .5s ease;
     opacity: 0;
-    position: absolute;
-    top: 45%;
-    left: 76%;
+    top: -35%;
+    left: 49.5%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
@@ -83,13 +79,30 @@
     opacity: 1;
   }
   
-  .text {
+  .elf-text {
+    background-color: aqua;
+    color: black;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+  .orc-text {
     background-color: #04AA6D;
     color: white;
     font-size: 16px;
     padding: 16px 32px;
   }
-
+  .vamp-text {
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+  .nord-text {
+    background-color: gold;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
   .select-guild {
     display: flex;
     flex-direction: row;
@@ -108,3 +121,5 @@
   .nord-guild {
     margin-right: 10px;
   }
+
+  

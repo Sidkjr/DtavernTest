@@ -146,26 +146,26 @@ const App = ({ contract }) => {
                             <div className='select-guild'>
                             <div className="elf-guild">
                                 <img src={elfselect} alt="Elf" className="image" style={{width: 245 + "px"}}/>
-                                <div className="elfhover">
-                                    <button className='text' onClick={elfguild}>Elves</button>
+                                <div className="elfhover" style={{position: 'relative'}}>
+                                    <button className='elf-text' onClick={elfguild}>Elves</button>
                                 </div>
                             </div>
                             <div className="orc-guild">
                                 <img src={orcselect} alt="Orc" className="image" style={{width: 245 + "px"}}/>
-                                <div className="orchover">
-                                    <button className='text' onClick={orcguild}>Orcs</button>
+                                <div className="orchover" style={{position: 'relative'}}>
+                                    <button className='orc-text' onClick={orcguild}>Orcs</button>
                                 </div>
                             </div>
                             <div className="vamp-guild">
                                 <img src={vampselect} alt="Vamp" className="image" style={{width:245 + "px"}}/>
-                                <div className="vamphover">
-                                    <button className='text' onClick={vampguild}>Vampires</button>
+                                <div className="vamphover" style={{position: 'relative'}}>
+                                    <button className='vamp-text' onClick={vampguild}>Vampires</button>
                                 </div>
                             </div>
                             <div className="nord-guild">
                                 <img src={nordselect} alt="Nord" className="image" style={{width: 245 + "px"}}/>
-                                <div className="nordhover">
-                                    <button className='text' onClick={nordguild}>Nord</button>
+                                <div className="nordhover" style={{position: 'relative'}}>
+                                    <button className='nord-text' onClick={nordguild}>Nord</button>
                                 </div>
                             </div>
                         </div>
