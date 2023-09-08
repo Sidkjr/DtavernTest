@@ -91,6 +91,10 @@ const App = ({ contract }) => {
         await (await contract.setProfile(nft.id)).wait()
         getProfile(nfts)
     }
+
+    const leaveGuild = async => {
+        setGuild('')
+    }
     const elfguild = async => {
         setGuild('Elf')
         console.log(guild)
@@ -134,7 +138,12 @@ const App = ({ contract }) => {
                     
                     <div className="content mx-auto">
                         <Row>
-                        <div className='select-guild'>
+                        { guild ? (
+                        <div>
+                            {guild}
+                            <button onClick={leaveGuild}>Leave Guild</button>
+                        </div>): (
+                            <div className='select-guild'>
                             <div className="elf-guild">
                                 <img src={elfselect} alt="Elf" className="image" style={{width: 245 + "px"}}/>
                                 <div className="elfhover">
@@ -160,6 +169,7 @@ const App = ({ contract }) => {
                                 </div>
                             </div>
                         </div>
+                        )}
                         </Row>
                         <Row className="g-4">
                             <Form.Control
