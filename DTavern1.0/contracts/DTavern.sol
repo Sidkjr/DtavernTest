@@ -12,7 +12,7 @@ import "hardhat/console.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
-contract Decentratwitter is ERC721URIStorage {
+contract DTavern is ERC721URIStorage {
     uint256 public tokenCount;
     uint256 public postCount;
     mapping(uint256 => Post) public posts;
@@ -40,7 +40,7 @@ contract Decentratwitter is ERC721URIStorage {
         address payable author
     );
 
-    constructor() ERC721("Decentratwitter", "DAPP") {}
+    constructor() ERC721("DTavern", "DAPP") {}
 
     function mint(string memory _tokenURI) external returns (uint256) {
         tokenCount++;

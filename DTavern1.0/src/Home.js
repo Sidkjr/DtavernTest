@@ -133,9 +133,9 @@ const Home = ({ contract }) => {
             {posts.length > 0 ?
                 posts.map((post, key) => {
                     return (
-                        <div key={key} className="col-lg-12 my-3 mx-auto" style={{ width: '500px' }}>
+                        <div key={key} className="col-lg-12 my-3 mx-auto" style={{ width: '600px' }}>
                             <Card style={{padding: '2.5%', borderRadius: '15px', boxShadow: '0 0 20px gold', marginBottom: '50px'}}>
-                                <Card.Header style={{borderRadius: '15px', }}>
+                                <Card.Header style={{borderRadius: '15px',boxShadow: '0 0 10px grey' }}>
                                     <img
                                         className='mr-2'
                                         width='50'
@@ -146,14 +146,14 @@ const Home = ({ contract }) => {
                                     <small className="ms-2 me-auto d-inline">
                                         {post.author.username}
                                     </small>
-                                    <small>
+                                    <small style={{marginLeft: '10px'}}>
                                         {
                                             (()=> {
                                                 switch (post.author.guild) {
-                                                case 'Elf': return (<span style={{backgroundColor: 'aqua', color: 'black'}}>Elf</span>);
-                                                case 'Orc': return (<span style={{backgroundColor: 'green', color: 'white'}}>Orc</span>);
-                                                case 'Vamp': return (<span style={{backgroundColor: 'red', color: 'white'}}>Vamp</span>);
-                                                case 'Nord': return (<span style={{backgroundColor: 'gold', color: 'black'}}>Nord</span>);
+                                                case 'Elf': return (<span style={{backgroundColor: 'aqua', color: 'black', padding: '1%', borderRadius: '20%'}}>Elf</span>);
+                                                case 'Orc': return (<span style={{backgroundColor: 'green', color: 'white', padding: '1%', borderRadius: '20%'}}>Orc</span>);
+                                                case 'Vamp': return (<span style={{backgroundColor: 'red', color: 'white', padding: '1%', borderRadius: '20%'}}>Vamp</span>);
+                                                case 'Nord': return (<span style={{backgroundColor: 'gold', color: 'black', padding: '1%', borderRadius: '20%'}}>Nord</span>);
                                                 }
                                             })()
                                         }
@@ -162,7 +162,7 @@ const Home = ({ contract }) => {
                                         {post.author.address}
                                     </small>
                                 </Card.Header>
-                                <Card.Body color="grey" style={{backgroundColor: '#171717', borderRadius: '15px', boxShadow: '0 0 5px gold', marginBottom: '20px'}}>
+                                <Card.Body color="grey" style={{backgroundColor: '#171717', borderRadius: '15px', boxShadow: '0 0 5px gold', marginBottom: '20px', marginTop: '15px'}}>
                                     <Card.Title >
                                         <div style={{color: 'whitesmoke'}}>
                                             {post.content}

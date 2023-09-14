@@ -1,3 +1,4 @@
+
   .image {
     opacity: 1;
     display: block;
@@ -80,9 +81,11 @@
   }
   
   .elf-text {
-    background-color: aqua;
-    color: black;
+    background-color: blue;
+    color: white;
     font-size: 16px;
+    font-weight: bold;
+    border-radius: 15px;
     padding: 16px 32px;
   }
   .orc-text {
@@ -90,18 +93,24 @@
     color: white;
     font-size: 16px;
     padding: 16px 32px;
+    font-weight: bold;
+    border-radius: 15px;
   }
   .vamp-text {
-    background-color: red;
+    background-color: rgb(245, 57, 57);
     color: white;
     font-size: 16px;
     padding: 16px 32px;
+    font-weight: bold;
+    border-radius: 15px;
   }
   .nord-text {
-    background-color: gold;
+    background-color: rgb(200, 174, 24);
     color: white;
     font-size: 16px;
     padding: 16px 32px;
+    font-weight: bold;
+    border-radius: 15px;
   }
   .select-guild {
     display: flex;
@@ -110,13 +119,13 @@
   }
 
   .elf-guild {
-    margin-right: 10px;
+    margin-right: 20px;
   }
   .orc-guild {
-    margin-right: 10px;
+    margin-right: 20px;
   }
   .vamp-guild {
-    margin-right: 10px;
+    margin-right: 20px;
   }
   .nord-guild {
     margin-right: 10px;

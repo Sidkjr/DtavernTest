@@ -3,9 +3,9 @@ const { ethers } = require('hardhat');
 async function main() {
   const [deployer, user1] = await ethers.getSigners();
   // We get the contract factory to deploy
-  const DecentratwitterFactory = await ethers.getContractFactory("Decentratwitter");
+  const DTavernFactory = await ethers.getContractFactory("DTavern");
   // Deploy contract
-  const decentratwitter = await DecentratwitterFactory.deploy();
+  const dtavern = await DTavernFactory.deploy();
   // Save contract address file in project
   const contractsDir = __dirname + "/../src/contractsData";
   if (!fs.existsSync(contractsDir)) {
@@ -13,17 +13,17 @@ async function main() {
   }
 
   fs.writeFileSync(
-    contractsDir + `/decentratwitter-address.json`,
-    JSON.stringify({ address: decentratwitter.address }, undefined, 2)
+    contractsDir + `/dtavern-address.json`,
+    JSON.stringify({ address: dtavern.address }, undefined, 2)
   );
 
-  const contractArtifact = artifacts.readArtifactSync("Decentratwitter");
+  const contractArtifact = artifacts.readArtifactSync("DTavern");
 
   fs.writeFileSync(
-    contractsDir + `/decentratwitter.json`,
+    contractsDir + `/dtavern.json`,
     JSON.stringify(contractArtifact, null, 2)
   );
-  console.log("Decentratwitter deployed to:", decentratwitter.address);
+  console.log("DTavern deployed to:", dtavern.address);
 }
 
 main()

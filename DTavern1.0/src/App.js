@@ -45,9 +45,11 @@ function App() {
     setLoading(false)
   }
   return (
-    <BrowserRouter>
-      <div className="App" style={{backgroundColor: '#171717' , height: '100%'}}>
+    <BrowserRouter >
+    
+      <div className="App" style={{backgroundColor: '#171717'}}>
         <>
+          
           <Navbar expand="lg" bg="gold" variant="dark">
             <Container>
               <Navbar.Brand href="http://www.dappuniversity.com/bootcamp">
@@ -97,6 +99,7 @@ function App() {
             </Routes>
           )}
         </div>
+        
       </div>
     </BrowserRouter>
 
